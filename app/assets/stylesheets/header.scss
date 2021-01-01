@@ -6,8 +6,8 @@ $header-padding-y: 16px;
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: $primary-color;
-  padding: $header-padding-y 16px;
+  background-color: #062092;
+  padding: $header-padding-y 10%;
   font-weight: bold;
 
   &_pageTitle {
@@ -47,7 +47,7 @@ $header-padding-y: 16px;
   padding: 8px 16px;
   text-decoration: none;
   display: block;
-  color: $text-base-color;
+  color: #000000;
 }
 
 .dropdown-content a:hover {
