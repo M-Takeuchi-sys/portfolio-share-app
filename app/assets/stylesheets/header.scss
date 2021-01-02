@@ -6,9 +6,18 @@ $header-padding-y: 16px;
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: #062092;
+  background-color: $devise-header-color;
   padding: $header-padding-y 10%;
   font-weight: bold;
+
+  a.header_loginBtn {
+    background-color: $base-bg-color;
+    height: $avatar-size;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 12px 16px;
+    color: #000000;
+  }
 
   &_pageTitle {
     color: white;
