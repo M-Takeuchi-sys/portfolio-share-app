@@ -5,6 +5,7 @@
 @import 'buttons';
 @import 'form';
 @import 'footer';
+@import 'profile';
 
 html {
   word-spacing: 1px;
@@ -30,14 +31,22 @@ body {
   color: $text-base-color;
 }
 
+a {
+  text-decoration: none;
+  color: $text-base-color;
+}
+
 .container {
   padding: 16px 16px;
+  max-width: 800px;
+  margin: auto;
   width: 100%;
 
   &_image {
     background-image: url('/images/devise_bg_image.jpeg');
     background-size: cover;
     height: 82%;
+    color: #FFFFFF;
 
     &_min {
     background-image: url('/images/devise_bg_image.jpeg');
@@ -56,10 +65,9 @@ body {
     max-width: 300px;
     margin: auto;
     padding-top: 150px;
-  }
-}
 
-a {
-  text-decoration: none;
-  color: $text-base-color;
+    a {
+      color: #FFFFFF;
+    }
+  }
 }

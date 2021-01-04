@@ -1,0 +1,30 @@
+.container.profilePage
+  .profilePage_user
+    .profilePage_user_image
+      = image_tag 'default-avatar.png'
+    .profilePage_user_basicInfo
+      .profilePage_user_name
+        .profilePage_user_displayName
+          #{current_user.display_name}（#{current_user.age || '？歳'}・#{I18n.t("enum.genders.#{current_user.gender}")}）
+        .profilePage_user_actionButton
+          = link_to 'Edit', edit_profile_path
+      .profilePage_user_introduction
+        = current_user.profile&.introduction
+  .profilePage_value
+    .profilePage_value_posts
+      .profilePage_value_posts_text
+        %p 作品数
+      .profilePage_value_posts_count
+        %p 5
+    .profilePage_value_followers
+      %a
+        .profilePage_value_followers_text
+          %p フォロワー
+        .profilePage_value_followers_count#follower_count
+          %p 4
+    .profilePage_value_following
+      %a
+        .profilePage_value_following_text
+          %p フォロー
+        .profilePage_value_following_count
+          %p 3
