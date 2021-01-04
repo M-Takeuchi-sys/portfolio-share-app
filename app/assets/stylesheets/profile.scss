@@ -3,6 +3,8 @@ $image_size: 56px;
 .profilePage {
   margin-top: 24px;
 
+
+
   &_user {
     display: flex;
 
@@ -50,6 +52,56 @@ $image_size: 56px;
 
     &_introduction {
       font-size: 12px;
+    }
+  }
+
+  &_value {
+    display: flex;
+    justify-content: space-around;
+    padding: 43px 0;
+  
+    &_posts {
+      display: inline;
+      width: 75px;
+
+      &_count {
+        text-align: center;
+        color: #333A42;
+      }
+      &_text {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+
+    &_followers {
+      display: inline;
+      width: 75px;
+      cursor: pointer;
+
+      &_count {
+        text-align: center;
+        color: #333A42;
+      }
+      &_text {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+
+    &_following {
+      display: inline;
+      width: 75px;
+      cursor: pointer;
+
+      &_count {
+        text-align: center;
+        color: #333A42;
+      }
+      &_text {
+        text-align: center;
+        font-size: 14px;
+      }
     }
   }
 }
