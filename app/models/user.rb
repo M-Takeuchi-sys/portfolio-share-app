@@ -27,10 +27,18 @@ class User < ApplicationRecord
   delegate :birthday, :age, :gender, to: :profile, allow_nil: true
 
   def display_name
-    profile&.nickname || self.email.split('@').first
+    profile&.nickname || self.email.split('@').first #ぼっち演算子profileがnilならemailを表示
   end
 
   def prepare_profile
-    profile || build_profile
+    profile || build_profile #profileの値がなければbuild_prrofile
+  end
+
+  def avatar_image
+    if profile&.avatar&.attached?
+      profile.avatar
+    else
+      'default-avatar.png'
+    end
   end
 end
