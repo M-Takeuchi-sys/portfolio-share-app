@@ -1,2 +1,16 @@
+.container_image_min
 .container
-  
+  - @protfolios.each do |protfolio|
+    .card
+      .card_image
+        = image_tag 'eyecatch1.png'
+      .card_content
+        .card_detail
+          = image_tag 'default-avatar.png'
+          %div
+            %p cohki0305
+            %p 2020/4/16
+        .card_title
+          = protfolio.title
+        .card_overview
+          = protfolio.content

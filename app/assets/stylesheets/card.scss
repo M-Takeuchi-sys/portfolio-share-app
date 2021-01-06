@@ -8,6 +8,9 @@ $avatar-size: 32px;
   margin: 16px 0;
   cursor: pointer;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  height: 200px;
+  border-radius: 2em;
 
   &_heart {
     display: flex;
@@ -27,7 +30,6 @@ $avatar-size: 32px;
   }
 
   &_detail {
-    padding-top: 12px;
     cursor: pointer;
     display: flex;
     font-size: 10px;
@@ -38,16 +40,27 @@ $avatar-size: 32px;
       border-radius: 100%;
       margin-right: 8px;
     }
+
+    div {
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
   }
 
   &_content {
+    width: 55%;
     padding: 16px 16px;
   }
 
   &_image {
+    width: 40%;
+    max-width: 2000px;
     height: 180px;
     position: relative;
     overflow: hidden;
+    border-radius: 2em;
+    margin: 10px;
 
     img {
       position: absolute;
@@ -58,5 +71,19 @@ $avatar-size: 32px;
       transform: translate(-50%, -50%);
       width: 100%;
     }
+  }
+
+  &_title {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    padding-top: 5px;
+  }
+
+  &_overview {
+    height: 120px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    padding-top: 5px;
   }
 }
