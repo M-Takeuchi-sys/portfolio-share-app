@@ -8,9 +8,12 @@
         .card_detail
           = image_tag 'default-avatar.png'
           %div
-            %p cohki0305
-            %p 2020/4/16
+            - if protfolio.user.present?
+              %p= protfolio.user.display_name
         .card_title
           = protfolio.title
         .card_overview
           = protfolio.content
+        .card_created
+          %p 投稿日：
+          %p= protfolio.display_created_at

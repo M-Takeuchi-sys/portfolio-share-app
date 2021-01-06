@@ -32,19 +32,20 @@ $avatar-size: 32px;
   &_detail {
     cursor: pointer;
     display: flex;
-    font-size: 10px;
+    align-items: center;
 
     img {
       width: $avatar-size;
       height: $avatar-size;
       border-radius: 100%;
-      margin-right: 8px;
+      margin-right: 20px;
     }
 
     div {
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
+      font-weight: bolder;
     }
   }
 
@@ -81,9 +82,13 @@ $avatar-size: 32px;
   }
 
   &_overview {
-    height: 120px;
+    height: 50%;
     overflow:hidden;
     text-overflow:ellipsis;
     padding-top: 5px;
+  }
+
+  &_created {
+    display: flex;
   }
 }
