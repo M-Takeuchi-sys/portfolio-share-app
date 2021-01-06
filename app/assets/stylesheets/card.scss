@@ -8,46 +8,43 @@ $avatar-size: 32px;
   margin: 16px 0;
   cursor: pointer;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-
-  &_heart {
-    display: flex;
-
-    img {
-      width: $heart-size;
-      height: $heart-size;
-    }
-
-    span {
-      margin-left: 8px;
-      font-size: 12px;
-      font-weight: bold;
-      color: $primary-color;
-      line-height: $heart-size;
-    }
-  }
+  display: flex;
+  height: 200px;
+  border-radius: 2em;
 
   &_detail {
-    padding-top: 12px;
     cursor: pointer;
     display: flex;
-    font-size: 10px;
+    align-items: center;
 
     img {
       width: $avatar-size;
       height: $avatar-size;
       border-radius: 100%;
-      margin-right: 8px;
+      margin-right: 20px;
+    }
+
+    div {
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      font-weight: bolder;
     }
   }
 
   &_content {
+    width: 55%;
     padding: 16px 16px;
   }
 
   &_image {
+    width: 40%;
+    max-width: 2000px;
     height: 180px;
     position: relative;
     overflow: hidden;
+    border-radius: 2em;
+    margin: 10px;
 
     img {
       position: absolute;
@@ -58,5 +55,25 @@ $avatar-size: 32px;
       transform: translate(-50%, -50%);
       width: 100%;
     }
+  }
+
+  &_title {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-weight: bolder;
+    padding-top: 5px;
+  }
+
+  &_overview {
+    height: 45%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    padding-top: 5px;
+  }
+
+  &_created {
+    display: flex;
+    padding-top: 5px;
   }
 }

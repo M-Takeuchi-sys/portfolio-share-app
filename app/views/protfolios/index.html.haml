@@ -1,0 +1,19 @@
+.container_image_min
+.container
+  - @protfolios.each do |protfolio|
+    .card
+      .card_image
+        = image_tag 'eyecatch1.png'
+      .card_content
+        .card_detail
+          = image_tag protfolio.user.avatar_image
+          %div
+            - if protfolio.user.present?
+              %p= protfolio.user.display_name
+        .card_title
+          = protfolio.title
+        .card_overview
+          = protfolio.content
+        .card_created
+          %p 投稿日：
+          %p= protfolio.display_created_at
