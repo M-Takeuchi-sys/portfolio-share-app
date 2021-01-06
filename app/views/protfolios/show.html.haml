@@ -1,0 +1,17 @@
+.container
+  .protfolio
+    .protfolio_image
+      = image_tag 'eyecatch1.png'
+    .protfolio_content
+      .protfolio_detail
+        = image_tag @protfolio.user.avatar_image
+        %div
+          - if @protfolio.user.present?
+            %p= @protfolio.user.display_name
+      .protfolio_title
+        = @protfolio.title
+      .protfolio_overview
+        = @protfolio.content
+      .protfolio_created
+        %p 投稿日：
+        %p= @protfolio.display_created_at
