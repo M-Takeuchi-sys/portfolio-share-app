@@ -6,7 +6,7 @@
         = image_tag 'eyecatch1.png'
       .card_content
         .card_detail
-          = image_tag 'default-avatar.png'
+          = image_tag protfolio.user.avatar_image
           %div
             - if protfolio.user.present?
               %p= protfolio.user.display_name

@@ -12,23 +12,6 @@ $avatar-size: 32px;
   height: 200px;
   border-radius: 2em;
 
-  &_heart {
-    display: flex;
-
-    img {
-      width: $heart-size;
-      height: $heart-size;
-    }
-
-    span {
-      margin-left: 8px;
-      font-size: 12px;
-      font-weight: bold;
-      color: $primary-color;
-      line-height: $heart-size;
-    }
-  }
-
   &_detail {
     cursor: pointer;
     display: flex;
@@ -78,11 +61,12 @@ $avatar-size: 32px;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
+    font-weight: bolder;
     padding-top: 5px;
   }
 
   &_overview {
-    height: 50%;
+    height: 45%;
     overflow:hidden;
     text-overflow:ellipsis;
     padding-top: 5px;
@@ -90,5 +74,6 @@ $avatar-size: 32px;
 
   &_created {
     display: flex;
+    padding-top: 5px;
   }
 }
