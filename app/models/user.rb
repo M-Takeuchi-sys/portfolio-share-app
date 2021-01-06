@@ -23,6 +23,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :profile, dependent: :destroy
+  has_many :protfolio, dependent: :destroy
 
   delegate :birthday, :age, :gender, to: :profile, allow_nil: true
 
