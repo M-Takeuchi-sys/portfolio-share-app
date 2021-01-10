@@ -6,4 +6,7 @@ class ProtfoliosController < ApplicationController
   def show
     @protfolio = Protfolio.find(params[:id])
   end
+
+  def new
+  end
 end
