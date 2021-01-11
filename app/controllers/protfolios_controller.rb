@@ -8,5 +8,6 @@ class ProtfoliosController < ApplicationController
   end
 
   def new
+    @protfolio = current_user.protfolio.build
   end
 end
