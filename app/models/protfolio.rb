@@ -15,6 +15,9 @@
 #  index_protfolios_on_user_id  (user_id)
 #
 class Protfolio < ApplicationRecord
+  validates :title, presence: true
+  validates :content, presence: true
+  validates :url, presence: true
 
   belongs_to :user
 
