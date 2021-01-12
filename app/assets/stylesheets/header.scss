@@ -30,6 +30,10 @@ $header-padding-y: 16px;
     height: $avatar-size;
     border-radius: 100%;
   }
+
+  &_nav {
+    display: flex;
+  }
 }
 
 .dropbtn {
@@ -65,4 +69,14 @@ $header-padding-y: 16px;
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.float_btn {
+  color: $devise-header-color;
+  background-color: #FFFFFF;
+  padding: 0 10px;
+  border-radius: 2em;
+  line-height: $avatar-size;
+  font-size: 10px;
+  margin-left: 15px;
 }
