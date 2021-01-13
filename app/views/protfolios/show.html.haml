@@ -1,6 +1,7 @@
 .container
-  .protfolio_image
-    = image_tag 'eyecatch1.png'
+  - if @protfolio.eyecatch.attached?
+    .protfolio_image
+      = image_tag @protfolio.eyecatch
   .protfolio
     %h1.protfolio_title= @protfolio.title
     .protfolio_content

@@ -4,7 +4,8 @@
     =link_to protfolio_path(protfolio) do
       .card
         .card_image
-          = image_tag 'eyecatch1.png'
+          - if protfolio.eyecatch.attached?
+            = image_tag protfolio.eyecatch
         .card_content
           .card_detail
             = image_tag protfolio.user.avatar_image
