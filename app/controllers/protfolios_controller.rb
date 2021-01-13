@@ -23,6 +23,6 @@ class ProtfoliosController < ApplicationController
   
   private
   def protfolio_params
-    params.require(:protfolio).permit(:title, :content, :url)
+    params.require(:protfolio).permit(:title, :content, :url, :eyecatch)
   end
 end
