@@ -25,6 +25,16 @@ class ProtfoliosController < ApplicationController
     @protfolio = current_user.protfolios.find(params[:id])
   end
 
+  def update
+    @protfolio = current_user.protfolios.find(params[:id])
+    if @protfolio.update(protfolio_params)
+      redirect_to protfolio_path(@protfolio), notice: '更新できました'
+    else
+      flash.now[:error] = '更新できませんでした'
+      render :edit
+    end
+  end
+
   private
   def protfolio_params
     params.require(:protfolio).permit(:title, :content, :url, :eyecatch)

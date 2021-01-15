@@ -1,1 +1,22 @@
-edit
+.container
+  %ul
+    - @protfolio.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: @protfolio, url: protfolio_path(@protfolio), method: 'put', local: true) do |f|
+    %div
+      = f.label :eyecatch, 'アイキャッチ'
+    %div
+      = f.file_field :eyecatch
+    %div
+      = f.label :title, 'タイトル'
+    %div
+      = f.text_field :title, class: 'text'
+    %div
+      = f.label :content, '内容'
+    %div
+      = f.text_area :content
+    %div
+      = f.label :url, 'URL'
+    %div
+      = f.text_field :url, class: 'text'
+    = f.submit '保存', class: 'btn-primary'
