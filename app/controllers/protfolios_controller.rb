@@ -35,6 +35,12 @@ class ProtfoliosController < ApplicationController
     end
   end
 
+  def destroy
+    protfolio = current_user.protfolios.find(params[:id])
+    protfolio.destroy!
+    redirect_to root_path, notice: '削除に成功しました'
+  end
+
   private
   def protfolio_params
     params.require(:protfolio).permit(:title, :content, :url, :eyecatch)
