@@ -4,6 +4,11 @@
       = image_tag @protfolio.eyecatch
   .protfolio
     %h1.protfolio_title= @protfolio.title
+    .protfolio_detail_actions
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn'
+        .dropdown-content.mini
+          = link_to '編集する', edit_protfolio_path(@protfolio)
     .protfolio_content
       .protfolio_detail
         = image_tag @protfolio.user.avatar_image

@@ -20,7 +20,11 @@ class ProtfoliosController < ApplicationController
       render :new
     end
   end
-  
+
+  def edit
+    @protfolio = current_user.protfolios.find(params[:id])
+  end
+
   private
   def protfolio_params
     params.require(:protfolio).permit(:title, :content, :url, :eyecatch)
