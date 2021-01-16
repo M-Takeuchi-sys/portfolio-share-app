@@ -42,4 +42,8 @@ class User < ApplicationRecord
       'default-avatar.png'
     end
   end
+
+  def has_written?(protfolio)
+    protfolios.exists?(id: protfolio.id) #このポートフォリオに同じidがあるか？
+  end
 end

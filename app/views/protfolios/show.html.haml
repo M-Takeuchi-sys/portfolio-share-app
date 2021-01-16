@@ -4,12 +4,13 @@
       = image_tag @protfolio.eyecatch
   .protfolio
     %h1.protfolio_title= @protfolio.title
-    .protfolio_detail_actions
-      .dropdown
-        = image_tag 'actions.svg', class: 'dropbtn'
-        .dropdown-content.mini
-          = link_to '編集する', edit_protfolio_path(@protfolio)
-          = link_to '削除する', protfolio_path(@protfolio), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+    - if user_signed_in? && current_user.has_written?(@protfolio)
+      .protfolio_detail_actions
+        .dropdown
+          = image_tag 'actions.svg', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to '編集する', edit_protfolio_path(@protfolio)
+            = link_to '削除する', protfolio_path(@protfolio), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
     .protfolio_content
       .protfolio_detail
         = image_tag @protfolio.user.avatar_image

@@ -1,4 +1,6 @@
 class ProtfoliosController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     @protfolios = Protfolio.all.order(created_at: :desc)
   end
