@@ -47,4 +47,8 @@ class User < ApplicationRecord
   def has_written?(protfolio)
     protfolios.exists?(id: protfolio.id) #このポートフォリオに同じidがあるか？
   end
+
+  def has_liked?(protfolio)
+    likes.exists?(protfolio_id: protfolio.id)
+  end
 end
