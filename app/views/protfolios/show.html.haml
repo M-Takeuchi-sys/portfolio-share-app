@@ -28,13 +28,13 @@
               = link_to protfolio_like_path(@protfolio), data: { method: 'delete' } do
                 = image_tag 'heart-active.png'
               .like_count
-                %p 31
+                %p= @protfolio.like_count
           - else
             .protfolio_icon_heart
               = link_to protfolio_like_path(@protfolio), data: { method: 'post' } do
                 = image_tag 'heart.png'
               .like_count
-                %p 31
+                %p= @protfolio.like_count
         .protfolio_icon_comment
           = image_tag 'comment.png'
         .protfolio_icon_share

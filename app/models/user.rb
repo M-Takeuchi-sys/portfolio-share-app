@@ -25,6 +25,7 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
   has_many :protfolios, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :favorite_protfolios, through: :likes, source: :protfolio
 
   delegate :birthday, :age, :gender, to: :profile, allow_nil: true
 
