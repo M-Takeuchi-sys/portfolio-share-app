@@ -24,6 +24,8 @@ class User < ApplicationRecord
 
   has_one :profile, dependent: :destroy
   has_many :protfolios, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :favorite_protfolios, through: :likes, source: :protfolio
 
   delegate :birthday, :age, :gender, to: :profile, allow_nil: true
 
@@ -45,5 +47,9 @@ class User < ApplicationRecord
 
   def has_written?(protfolio)
     protfolios.exists?(id: protfolio.id) #このポートフォリオに同じidがあるか？
+  end
+
+  def has_liked?(protfolio)
+    likes.exists?(protfolio_id: protfolio.id)
   end
 end
